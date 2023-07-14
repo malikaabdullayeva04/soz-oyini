@@ -56,9 +56,7 @@ const timeInterval = setInterval(() => {
     removeHidden();
     inputContainer.classList.add("hidden");
     totalScore.textContent = userScore
-    // modalBody.innerHTML = `
-    // <p>Sizning toplagan balingiz: ${userScore}</p>
-    // `
+
   } else {
     clearInterval(timeInterval);
   }
