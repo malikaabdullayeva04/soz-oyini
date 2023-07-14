@@ -6,7 +6,9 @@ const inputEl = document.getElementById("user-word");
 const scoreEl = document.querySelector("#score");
 const timeEl = document.querySelector("#time");
 const inputContainer = document.querySelector(".input-container");
-const restartBtn = document.querySelector(".restart-btn");
+const modalBody = document.querySelector(".modal-body");
+const totalScore = document.querySelector("#total-score");
+const restartBtn = document.querySelector("#restart-btn");
 
 inputEl.focus();
 
@@ -40,7 +42,7 @@ inputEl.addEventListener("input", () => {
   if (userWord == randomWorld) {
     changeWord();
     userScore++;
-    userTime += 3;
+    userTime += 4;
     scoreEl.textContent = userScore;
     inputEl.value = "";
   }
@@ -53,6 +55,10 @@ const timeInterval = setInterval(() => {
   } else if (userTime == 0) {
     removeHidden();
     inputContainer.classList.add("hidden");
+    totalScore.textContent = userScore
+    // modalBody.innerHTML = `
+    // <p>Sizning toplagan balingiz: ${userScore}</p>
+    // `
   } else {
     clearInterval(timeInterval);
   }
@@ -69,3 +75,4 @@ document.addEventListener("keydown", (e) => {
     addHidden();
   }
 });
+
