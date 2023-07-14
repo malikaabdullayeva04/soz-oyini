@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- input -->
+    <div class="input-container">
+      <div class="container">
+        <h1 class="item" id="random-word">Awesome</h1>
+        <div class="input-container">
+          <input class="input" id="user-word" type="text" />
+        </div>
+      </div>
+
+      <div class="score-container">
+        <h3 class="title">Score: <span id="score">0</span></h3>
+        <h3 class="title">Time: <span id="time">0</span></h3>
+      </div>
+    </div>
+    <div class="wrapper">
+      <!-- MODAL -->
+      <div class="modal hidden" id="modal">
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          <button class="restart-btn">restart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay hidden" id="overlay"></div>
+
+    <!-- JS -->
+    <script src="./js/words.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
